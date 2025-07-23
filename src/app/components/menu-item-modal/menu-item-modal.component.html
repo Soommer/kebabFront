@@ -1,0 +1,51 @@
+<div class="modal-overlay">
+    <div class="modal">
+      <h2>Opcje dla: {{ item.name }}</h2>
+
+      <div *ngIf="formInvalid" class="error-msg">
+        Musisz wybrać dokładnie jeden sos i jeden rozmiar.
+      </div>
+  
+      <!-- Sosy -->
+      <fieldset>
+        <legend>Sosy</legend>
+        <label *ngFor="let sauce of sauces">
+          <input type="checkbox" [(ngModel)]="selectedSauces[sauce.id]" />
+          {{ sauce.name }}
+        </label>
+      </fieldset>
+  
+      <!-- Mięsa -->
+      <fieldset>
+        <legend>Mięsa</legend>
+        <label *ngFor="let meat of meats">
+          <input type="checkbox" [(ngModel)]="selectedMeats[meat.id]" />
+          {{ meat.name }}   x{{meat.extraPrice}}
+        </label>
+      </fieldset>
+
+      <!-- Dodatki -->
+      <fieldset>
+        <legend>Dodatki</legend>
+        <label *ngFor="let extra of extras">
+          <input type="checkbox" [(ngModel)]="selectedExtras[extra.id]" />
+          {{ extra.name }}   {{extra.price}}zł
+        </label>
+      </fieldset>
+  
+      <!-- Rozmiar -->
+      <fieldset>
+        <legend>Rozmiar</legend>
+        <label *ngFor="let size of sizes">
+          <input type="checkbox" [(ngModel)]="selectedSizes[size]" />
+          {{ size }}
+        </label>
+      </fieldset>
+  
+      <div class="modal-actions">
+        <button (click)="confirmAdd()">Potwierdź</button>
+        <button (click)="cancelAdd()">Anuluj</button>
+      </div>
+    </div>
+  </div>
+  

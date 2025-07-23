@@ -1,0 +1,53 @@
+<div class="cart-page-grid">
+  <!-- LEWA KOLUMNA: Pozycje w koszyku -->
+  <div class="cart-left">
+    <h2>Twój koszyk</h2>
+
+    <div *ngIf="isLoading">Ładowanie...</div>
+
+    <ng-container *ngIf="!isLoading">
+      <div *ngIf="cartItems.length > 0" class="cart-items">
+        <app-cart-item
+          *ngFor="let item of cartItems"
+          [cartItem]="item"
+          (remove)="onRemoveItem($event)">
+        </app-cart-item>
+      </div>
+
+      <div *ngIf="cartItems.length === 0" class="empty-cart">
+        Twój koszyk jest pusty.
+      </div>
+
+      <div *ngIf="cartItems.length > 0" class="cart-summary">
+        Łączna cena: {{ total }} zł
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- PRAWA KOLUMNA: Formularz dostawy -->
+  <div class="cart-right">
+    <h2>Dostawa</h2>
+
+    <label>
+      <input type="radio" name="deliveryType" [(ngModel)]="deliveryType" value="delivery" />
+      Dostawa
+    </label>
+    <label>
+      <input type="radio" name="deliveryType" [(ngModel)]="deliveryType" value="pickup" />
+      Odbiór osobisty
+    </label>
+
+    <div *ngIf="deliveryType === 'delivery'" class="address-form">
+      <input type="text" placeholder="Email" [(ngModel)]="email" />
+      <input type="text" placeholder="Ulica" [(ngModel)]="address.street" />
+      <input type="text" placeholder="Numer domu/mieszkania" [(ngModel)]="address.number" />
+      <input type="text" placeholder="Miasto" [(ngModel)]="address.city" />
+      <input type="text" placeholder="Kod pocztowy" [(ngModel)]="address.zip" />
+    </div>
+    <div *ngIf="deliveryType === 'pickup'" class="address-form">
+      <input type="text" placeholder="Email" [(ngModel)]="email" />
+    </div>
+
+    <button class="checkout-btn" (click)="proceedToPayment()">Przejdź do płatności</button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="cart-item">
+    <h3>{{ cartItem.menuItemName }}</h3>
+    <p>Mięso: {{ cartItem.meatName }}</p>
+    <p>Sos: {{ cartItem.souceName }}</p>
+    <p>Dodatki: {{ cartItem.extraNames.join(', ') }}</p>
+    <p>Rozmiar: {{ cartItem.size }}</p>
+    <p>Cena: {{ cartItem.totalPrice }} zł</p>
+
+    <button (click)="onRemoveClick()" class="remove-btn">Usuń</button>
+  </div>

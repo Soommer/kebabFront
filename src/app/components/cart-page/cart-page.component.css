@@ -1,0 +1,147 @@
+:host {
+  display: block;
+  padding: 2rem;
+  background-color: #fef4e8;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout siatki */
+.cart-page-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Lewa kolumna z pozycjami */
+.cart-left {
+  flex: 2;
+  min-width: 300px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Prawa kolumna z formularzem */
+.cart-right {
+  flex: 1;
+  min-width: 280px;
+  background-color: #fff8f0;
+  border: 2px solid #e67e22;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+}
+
+/* Tytuły */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #b33939;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Pola adresowe */
+.cart-right input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #fffdf8;
+}
+
+/* Radio input */
+.cart-right label {
+  display: block;
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.cart-right input[type="radio"] {
+  margin-right: 0.4rem;
+}
+
+/* Przycisk płatności */
+.checkout-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #2ecc71;
+}
+
+/* Podsumowanie */
+.cart-summary {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Pojedynczy element */
+.cart-item {
+  background-color: #fff8f0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #f39c12;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Przycisk usuń */
+.cart-item .remove-btn {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.cart-item .remove-btn:hover {
+  background-color: #e74c3c;
+}
+
+/* Koszyk pusty */
+.empty-cart {
+  font-style: italic;
+  text-align: center;
+  color: #888;
+  margin-top: 2rem;
+}

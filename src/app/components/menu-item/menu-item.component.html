@@ -1,0 +1,19 @@
+<div class="menu-card">
+  <img [src]="menuItem.imagePath" alt="{{ menuItem.name }}" class="menu-image" />
+  <div class="menu-info">
+    <h3>{{ menuItem.name }}</h3>
+    <p class="desc">{{ menuItem.description }}</p>
+    <div class="price-and-button">
+      <span class="price">{{ menuItem.basePrice }} zł</span>
+      <button (click)="openPopup()" class="cart-btn">Dodaj do koszyka</button>
+    </div>
+  </div>
+</div>
+
+<!-- Osobny komponent modala -->
+<app-menu-item-modal
+  *ngIf="showPopup"
+  [item]="menuItem"
+  (confirm)="onConfirm($event)"
+  (cancel)="onCancel()">
+</app-menu-item-modal>

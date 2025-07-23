@@ -1,0 +1,43 @@
+:host {
+    display: block;
+    padding: 2rem;
+    background-color: #fef4e8;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Tytuł sekcji */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #b33939;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Kontener na karty */
+  .menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* max 3 w rzędzie */
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  /* Styl ładowania i błędów */
+  .spinner, .error {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .spinner {
+    color: #555;
+    font-style: italic;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  

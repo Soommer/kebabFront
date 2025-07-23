@@ -1,0 +1,41 @@
+.cart-item {
+    background-color: #fff8f0; /* Jasne tło pasujące do restauracji/kebaba */
+    border: 2px solid #e67e22; /* Pomarańczowa ramka - apetyczny kolor */
+    border-radius: 12px; /* Zaokrąglenie rogów */
+    padding: 1.5rem; /* Wewnętrzny odstęp */
+    margin: 0.5rem 0; /* Odstęp między kartami */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    transition: transform 0.2s ease;
+  }
+  
+  .cart-item:hover {
+    transform: scale(1.02); /* Lekkie powiększenie na hover */
+  }
+  
+  .cart-item h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #d35400; /* Pomarańczowy kolor nazwy */
+    font-size: 1.4rem;
+  }
+  
+  .cart-item p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .remove-btn {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #e74c3c;
+  }

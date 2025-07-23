@@ -1,0 +1,77 @@
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    background: #fff8f0;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+    color: #8b0000;
+    font-size: 1.5rem;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 1.5rem;
+    padding: 0;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #b33939;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  label {
+    display: block;
+    margin: 4px 0;
+    font-size: 0.95rem;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .modal-actions button {
+    padding: 8px 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .modal-actions button:first-child {
+    background-color: #d35400;
+    color: white;
+  }
+  
+  .modal-actions button:last-child {
+    background-color: #ccc;
+  }
+
+  .error-msg {
+    background-color: #ffdddd;
+    color: #990000;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ff8888;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }

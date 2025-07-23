@@ -1,0 +1,13 @@
+<h2>Menu kebabowni</h2>
+
+<div *ngIf="isLoading" class="spinner">
+  Ładowanie kebabów... 🔥
+</div>
+
+<div *ngIf="hasError" class="error">
+  Ups! Coś poszło nie tak 😥
+</div>
+
+<div class="menu-list" *ngIf="!isLoading && !hasError">
+  <app-menu-item *ngFor="let menuItem of menuItems" [menuItem]="menuItem"></app-menu-item>
+</div>

@@ -1,0 +1,49 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+export interface CartItemCreateRequest {
+  menuItemId: string;
+  souceId: string;
+  meatTypeId: string;
+  extraIngredientIds: string[];
+  size: string;
+  cartId?: string;
+}
+
+export interface CartItem {
+  id: string,
+  menuItemName: string;
+  meatName: string;
+  souceName: string;
+  extraNames: string[];
+  size: string;
+  totalPrice: number;
+}
+
+export interface CartResponse {
+  id: string;
+  total: number;
+  cartItems: CartItem[];
+}
+
+@Injectable({ providedIn: 'root' })
+export class CartService {
+  constructor(private http: HttpClient) {}
+
+  addItem(request: CartItemCreateRequest): Observable<{ cartId: string }> {
+    return this.http.post<{ cartId: string }>('https://localhost:7247/api/Cart/addToCart', request );
+  }
+
+  getCart(cartId: string): Observable<CartResponse> {
+    return this.http.get<CartResponse>(`https://localhost:7247/api/Cart/${cartId}`);
+  }
+
+  deleteItem(itemId: string): Observable<void> {
+    return this.http.delete<void>(`https://localhost:7247/api/CartItem/${itemId}`)
+  }
+
+  getItemCount(cartId: string): Observable<{ count: number }> {
+    return this.http.get<{ count: number }>(`https://localhost:7247/api/cart/${cartId}/count`);
+  }
+}

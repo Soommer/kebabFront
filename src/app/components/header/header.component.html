@@ -1,0 +1,10 @@
+<header class="header">
+  <img src="kebab-logo.png" alt="Logo" class="logo" (click)="goToHome()" />
+
+  <h1 class="title">Kebab King</h1>
+
+  <div class="cart-icon" (click)="goToCart()">
+    <img src="cart.png" alt="Koszyk" />
+    <span *ngIf="cartCount > 0" class="badge">{{ cartCount }}</span>
+  </div>
+</header>
