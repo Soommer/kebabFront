@@ -35,4 +35,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "."                            # katalog z angular.json
-          output_location: "dist/kebabFront/browser"  # folder z index.html po buildzie
+          output_location: "dist/kebab-front/browser"  # folder z index.html po buildzie
