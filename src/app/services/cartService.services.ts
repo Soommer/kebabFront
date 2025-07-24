@@ -37,7 +37,7 @@ export class CartService {
 
 
   addItem(request: CartItemCreateRequest): Observable<{ cartId: string }> {
-    return this.http.post<{ cartId: string }>(`${this.api}/addToCart`, request );
+    return this.http.post<{ cartId: string }>(`${this.api}/Cart/addToCart`, request );
   }
 
   getCart(cartId: string): Observable<CartResponse> {
