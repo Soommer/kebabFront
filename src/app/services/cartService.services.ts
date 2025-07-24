@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 export interface CartItemCreateRequest {
   menuItemId: string;
   souceId: string;
@@ -32,7 +33,7 @@ export class CartService {
   constructor(private http: HttpClient) {}
 
   addItem(request: CartItemCreateRequest): Observable<{ cartId: string }> {
-    return this.http.post<{ cartId: string }>('https://localhost:7247/api/Cart/addToCart', request );
+    return this.http.post<{ cartId: string }>(`${}/addToCart`, request );
   }
 
   getCart(cartId: string): Observable<CartResponse> {
