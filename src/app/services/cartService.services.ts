@@ -37,18 +37,18 @@ export class CartService {
 
 
   addItem(request: CartItemCreateRequest): Observable<{ cartId: string }> {
-    return this.http.post<{ cartId: string }>(`${api}/addToCart`, request );
+    return this.http.post<{ cartId: string }>(`${this.api}/addToCart`, request );
   }
 
   getCart(cartId: string): Observable<CartResponse> {
-    return this.http.get<CartResponse>(`${api}/Cart/${cartId}`);
+    return this.http.get<CartResponse>(`${this.api}/Cart/${cartId}`);
   }
 
   deleteItem(itemId: string): Observable<void> {
-    return this.http.delete<void>(`${api}/CartItem/${itemId}`)
+    return this.http.delete<void>(`${this.api}/CartItem/${itemId}`)
   }
 
   getItemCount(cartId: string): Observable<{ count: number }> {
-    return this.http.get<{ count: number }>(`${api}/cart/${cartId}/count`);
+    return this.http.get<{ count: number }>(`${this.api}/cart/${cartId}/count`);
   }
 }
