@@ -10,7 +10,7 @@ export interface Meat {
 
 @Injectable({ providedIn: 'root' })
 export class MeatService {
-  private apiUrl = 'https://localhost:7247/api/MeatType'; 
+  private apiUrl = 'https://sklep-api.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/api/MeatType'; 
 
   constructor(private http: HttpClient) {}
 

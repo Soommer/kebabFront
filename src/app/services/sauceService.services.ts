@@ -9,7 +9,7 @@ export interface Sauce {
 
 @Injectable({ providedIn: 'root' })
 export class SauceService {
-  private apiUrl = 'https://localhost:7247/api/Souce'; 
+  private apiUrl = 'https://sklep-api.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/api/Souce'; 
 
   constructor(private http: HttpClient) {}
 

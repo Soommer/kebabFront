@@ -7,7 +7,7 @@ import {menuItem} from "../models/menuItem"
     providedIn: 'root'
 })
 export class MenuItemService {
-    private apiUrl = 'https://localhost:7247/api/MenuItem';
+    private apiUrl = 'https://sklep-api.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/api/MenuItem';
     
     constructor(private http: HttpClient){}
 

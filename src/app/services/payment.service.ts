@@ -19,7 +19,7 @@ export class PaymentService {
     console.log("Rozpoczynam płatność z danymi:", paymentRequest);
 
     const session = await firstValueFrom(this.http.post<{ sessionId: string }>(
-      'https://localhost:7247/api/payment/create-payment-session',
+      'https://sklep-api.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/api/payment/create-payment-session',
       paymentRequest
     ));
 

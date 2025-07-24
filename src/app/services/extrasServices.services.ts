@@ -11,7 +11,7 @@ export interface Extras {
 
 @Injectable({ providedIn: 'root' })
 export class ExtrasService {
-  private apiUrl = 'https://localhost:7247/api/ExtraIngredient'; 
+  private apiUrl = 'https://sklep-api.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/api/ExtraIngredient';
 
   constructor(private http: HttpClient) {}
 
